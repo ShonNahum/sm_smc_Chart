@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: smc-env-configmap
+data:
+  env.yaml: |-
+    backend_api_url: {{ .Values.smc.backend_api_url | quote }}
+    port: {{ .Values.smc.port | quote }}

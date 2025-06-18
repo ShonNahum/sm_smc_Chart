@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smc
+  template:
+    metadata:
+      labels:
+        app: smc
+    spec:
+      containers:
+        - name: smc
+          image: "{{ .Values.smc.image }}:{{ .Values.smc.tag }}"
+          ports:
+            - containerPort: {{ .Values.smc.port }}
+          volumeMounts:
+          - name: smc-env-config
+            mountPath: /app/env.yaml
+            subPath: env.yaml
+      volumes:
+      - name: smc-env-config
+        configMap:
+          name: smc-env-configmap
+          items:
+            - key: env.yaml
+              path: env.yaml

@@ -1,0 +1,14 @@
+sm:
+  image: shonnahum/sm
+  tag: v0.0.0
+  port: 5050
+  mongo:
+    uri: X
+    database: "status"
+    collection: "items"
+
+smc:
+  image: shonnahum/smc
+  tag: v0.0.0
+  port: 5051
+  backend_api_url: X

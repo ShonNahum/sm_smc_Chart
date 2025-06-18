@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sm-deloyment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sm
+  template:
+    metadata:
+      labels:
+        app: sm
+    spec:
+      
+      containers:
+        - name: sm
+          image: "{{ .Values.sm.image }}:{{ .Values.sm.tag }}"
+          ports:
+            - containerPort: {{ .Values.sm.port }}
+          volumeMounts:
+            - name: sm-env-config
+              mountPath: /app/env.yaml
+              subPath: env.yaml
+      volumes:
+        - name: sm-env-config
+          configMap:
+            name: sm-env-configmap
+            items:
+              - key: env.yaml
+                path: env.yaml

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sm-env-configmap
+data:
+  env.yaml: |-
+    mongodb:
+      uri: {{ .Values.sm.mongo.uri | quote }}
+      database: {{ .Values.sm.mongo.database | quote }}
+      collection: {{ .Values.sm.mongo.collection | quote }}
+    server:
+      port: {{ .Values.sm.port | quote }}
