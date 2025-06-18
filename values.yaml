@@ -11,4 +11,4 @@ smc:
   image: shonnahum/smc
   tag: v0.0.0
   port: 5051
-  backend_api_url: sm.local
+  backend_api_url: "http://sm.local/store"
