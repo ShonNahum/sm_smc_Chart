@@ -1,5 +1,5 @@
 sm:
-  image: shonnahum/sm
+  image: shonnahum/sm:11
   tag: 1
   port: 5050
   mongo:
@@ -8,7 +8,7 @@ sm:
     collection: "items"
 
 smc:
-  image: shonnahum/smc
+  image: shonnahum/smc:11
   tag: 1
   port: 5051
   backend_api_url: "http://sm.local/store"
