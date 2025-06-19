@@ -9,7 +9,7 @@ spec:
     - host: sm.local
       http:
         paths:
-          - path: /store
+          - path: /
             pathType: Prefix
             backend:
               service:
