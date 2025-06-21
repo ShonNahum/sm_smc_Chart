@@ -1,6 +1,6 @@
 sm:
   image: shonnahum/sm
-  tag: v0.0.0
+  tag: v1.0.0
   port: 5050
   mongo:
     uri: "mongodb://shon:123@172.26.255.104:27017/"
@@ -12,7 +12,7 @@ sm:
 
 smc:
   image: shonnahum/smc
-  tag: v0.0.0
+  tag: v1.0.0
   port: 5051
   backend_api_url: "http://sm.local/store"
   loki:

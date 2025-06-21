@@ -16,6 +16,7 @@ spec:
       containers:
         - name: sm
           image: "{{ .Values.sm.image }}:{{ .Values.sm.tag }}"
+          imagePullPolicy: Always
           ports:
             - containerPort: {{ .Values.sm.port }}
           volumeMounts:
