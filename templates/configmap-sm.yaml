@@ -10,3 +10,5 @@ data:
       collection: {{ .Values.sm.mongo.collection | quote }}
     server:
       port: {{ .Values.sm.port | quote }}
+    loki:
+      url: {{ .Values.sm.loki.url | quote }}
