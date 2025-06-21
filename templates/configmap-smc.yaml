@@ -6,3 +6,4 @@ data:
   env.yaml: |-
     backend_api_url: {{ .Values.smc.backend_api_url | quote }}
     port: {{ .Values.smc.port | quote }}
+    loki_url: {{ .Values.smc.loki.url | quote }}
