@@ -9,8 +9,8 @@ sm:
   loki:
     url: "http://172.26.255.104:3100/loki/api/v1/push"
   jaeger:
-  host: "localhost"  
-  port: 4317
+    host: "localhost"  
+    port: 4317
 
 smc:
   image: shonnahum/smc
