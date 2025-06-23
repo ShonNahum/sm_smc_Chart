@@ -12,3 +12,6 @@ data:
       port: {{ .Values.sm.port | quote }}
     loki:
       url: {{ .Values.sm.loki.url | quote }}
+    jaeger:
+      host: {{ .Values.sm.jaeger.host | quote }}
+      port: {{ .Values.sm.jaeger.port | quote }}
