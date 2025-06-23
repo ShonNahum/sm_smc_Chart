@@ -9,7 +9,7 @@ sm:
   loki:
     url: "http://172.26.255.104:3100/loki/api/v1/push"
   jaeger:
-    host: "localhost"  
+    host: "172.26.255.104"  
     port: 4317
 
 smc:
@@ -20,5 +20,5 @@ smc:
   loki:
     url: "http://172.26.255.104:3100/loki/api/v1/push"
   jaeger:
-    host: "localhost" 
+    host: "172.26.255.104" 
     port: 4317
